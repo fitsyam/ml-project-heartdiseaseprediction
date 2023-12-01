@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <style>
+        .bg-white {
+            background-color: #ffe6e6; 
+        }
+
+        .bg-gray-50 {
+            background-color: #F05252;
+        }
+
+        .text-gray-900 {
+            color: #E5E7EB;
+        }
+
+        .text-gray-500 {
+            color: #E5E7EB;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+        <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
+            
+            <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-6">Heart Disease Prediction with Random Forest Algorithm</h1>
+            <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Penyakit jantung dapat terjadi karena adanya kerusakan pada pembuluh darah atau jantung itu sendiri, yang dapat disebabkan oleh sejumlah faktor, termasuk gaya hidup yang tidak sehat, faktor genetik, tekanan darah tinggi, kolesterol tinggi, merokok, diabetes, dan faktor risiko lainnya.</p>
+            <a href="{{ url_for('check_yourself') }}" class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Check Yourself Here!
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+                
+                <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Made by Kelompok 6</h2>
+                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4"></p>
+                <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <li>
+                        Fitra Syamli Yudhisaputra - 24060121140124
+                    </li>
+                    <li>
+                        Fa'iq Rindha Maulana - 240601211300
+                    </li>
+                    <li>
+                        Alfarizi Hidayah - 240601211300
+                    </li>
+                    <li>
+                        Ganar Khatir Faza Zain - 240601211300
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+                <div>
+                    <!-- Update the 'src' attribute with the correct path to your image -->
+                    <img class="h-auto max-w-full rounded-lg" src="{{url_for('static', filename='dist/css/giphy.gif')}}" alt="heart gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>

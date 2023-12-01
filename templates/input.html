@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input Form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F05252;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .text-gray-900 {
+            text-align: center;
+            color:#E5E7EB;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px; /* Adjust this value as needed */
+            margin: 20px auto;
+            background-color:  #ffe6e6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form-image {
+            width: 30%; 
+            height: 50%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Your form goes here -->
+</body>
+
+</html>
+</head>
+
+<body>
+
+    <h2 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mt-6 ">Input Data for Prediction</h2>
+
+    <div class="form-container">
+        <img src="{{url_for('static', filename='dist/css/garis.gif')}}" alt="Your Image" class="form-image">
+        <form action="/submit" method="post">
+            <!-- Age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <!-- Sex -->
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value=''>-- Select Sex --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+
+            <!-- Chest Pain Type -->
+            <label for="chest_pain">Chest Pain Type:</label>
+            <select id="chest_pain" name="chest_pain" required>
+                <option value=''>-- Select Chest Pain Type --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select><br> 
+
+            <!-- Blood Pressure -->
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" id="blood_pressure" name="blood_pressure" required><br>
+
+            <!-- Cholesterol -->
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" id="cholesterol" name="cholesterol" required><br>
+
+            <!-- FBS Over 120 -->
+            <label for="fbs_over_120">FBS Over 120:</label>
+            <input type="number" id="fbs_over_120" name="fbs_over_120" required><br>
+
+            <!-- EKG Results -->
+            <label for="ekg_results">EKG Results:</label>
+            <input type="number" id="ekg_results" name="ekg_results" required><br>
+
+            <!-- Max HR -->
+            <label for="max_hr">Max HR:</label>
+            <input type="number" id="max_hr" name="max_hr" required><br>
+
+            <!-- Exercise Angina -->
+            <label for="exercise_angina">Exercise Angina:</label>
+            <select id="exercise_angina" name="exercise_angina" required>
+                <option value=''>-- Select Your option --</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+
+            <!-- ST Depression -->
+            <label for="st_depression">ST Depression:</label>
+            <input type="number" id="st_depression" name="st_depression" required><br>
+
+            <!-- Slope of ST -->
+            <label for="slope_of_st">Slope of ST:</label>
+            <input type="number" id="slope_of_st" name="slope_of_st" required><br>
+
+            <!-- Number of Vessel Fluro -->
+            <label for="num_vessel_fluro">Number of Vessel Fluro:</label>
+            <input type="number" id="num_vessel_fluro" name="num_vessel_fluro" required><br>
+
+            <!-- Thallium -->
+            <label for="thallium">Thallium:</label>
+            <input type="number" id="thallium" name="thallium" required><br>
+
+            <!-- Add more input fields as needed -->
+
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <img src="{{url_for('static', filename='dist/css/garis.gif')}}" alt="Your Image" class="form-image">
+</body>
+
+</html>
