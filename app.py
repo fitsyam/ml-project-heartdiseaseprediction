@@ -42,9 +42,9 @@ def submit():
         input_data = np.array([[age, sex, chest_pain, blood_pressure, cholesterol, fbs_over_20, ekg_results, max_hr, exercise_angina, st_depression, slope_of_st, num_vessel_fluro, thallium]])
         prediction_result = model.predict(input_data)
         if prediction_result[0] == 0:
-            prediction = "Anda tidak memiliki kemungkinan terkena penyakit jantung"
+            prediction = "ANDA TIDAK MEMILIKI KEMUNGKINAN TERKENA PENYAKIT JANTUNG"
         else:
-            prediction = "Anda memiliki kemungkinan terkena penyakit jantung"
+            prediction = "ANDA MEMILIKI KEMUNGKINAN TERKENA PENYAKIT JANTUNG"
 
 
         # Tampilkan hasilnya di halaman baru

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Disease Prediction</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&family=Outfit:wght@300;900&display=swap" rel="stylesheet">
     <style>
         .bg-white {
             background-color: #ffe6e6; 
@@ -22,7 +25,29 @@
 
         .text-gray-500 {
             color: #E5E7EB;
+            font-family: 'Noto Sans Tangsa', sans-serif;
+        }
+
+        ul li {
+            font-family: 'Outfit', sans-serif;
             font-size: 1.25rem;
+            color: #E5E7EB;
+        }
+
+        .check-here-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            font-weight: bold;  
+        }
+
+        .check-here-btn:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
@@ -35,12 +60,9 @@
         <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
             
             <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-6">Heart Disease Prediction with Random Forest Algorithm</h1>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Penyakit jantung dapat terjadi karena adanya kerusakan pada pembuluh darah atau jantung itu sendiri, yang dapat disebabkan oleh sejumlah faktor, termasuk gaya hidup yang tidak sehat, faktor genetik, tekanan darah tinggi, kolesterol tinggi, merokok, diabetes, dan faktor risiko lainnya.</p>
-            <a href="{{ url_for('check_yourself') }}" class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Penyakit jantung dapat terjadi karena adanya kerusakan pada pembuluh darah atau jantung itu sendiri, di sini kita akan melakukan prediksi apakah kamu terkena penyakit jantung atau tidak Prediksi ini dilakukan dengan menginputkan sejumlah data yaitu Jumlah pembuluh darah yang terkena fluoroskopi, Thallium, Depresi ST, Denyut jantung maksimum, Usia, Tekanan darah, Jenis kelamin, Kolesterol, Hasil EKG, Kemiringan ST, FBS (gula darah puasa) di atas 120, Jenis nyeri dada, Angina saat berolahraga</p>
+            <a href="{{ url_for('check_yourself') }}" class="check-here-btn">
                 Check Yourself Here!
-                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
             </a>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
