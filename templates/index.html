@@ -1,102 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heart Disease Prediction</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&family=Outfit:wght@300;900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='dist/css/output.css')}}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&family=Outfit:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        .bg-white {
-            background-color: #ffe6e6; 
-        }
+      .bg-white {
+        background-color: #ffe6e6;
+      }
 
-        .bg-gray-50 {
-            background-color: #F05252;
-        }
+      .bg-gray-50 {
+        background-color: #f05252;
+      }
 
-        .text-gray-900 {
-            color: #E5E7EB;
-        }
+      .text-gray-900 {
+        color: #e5e7eb;
+      }
 
-        .text-gray-500 {
-            color: #E5E7EB;
-            font-family: 'Noto Sans Tangsa', sans-serif;
-        }
+      .text-gray-500 {
+        color: #e5e7eb;
+        font-family: "Noto Sans Tangsa", sans-serif;
+      }
 
-        ul li {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            color: #E5E7EB;
-        }
+      ul li {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.25rem;
+        color: #e5e7eb;
+      }
 
-        .check-here-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #3498db;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-family: 'Outfit', sans-serif;
-            font-weight: bold;  
-        }
+      .check-here-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-family: "Outfit", sans-serif;
+        font-weight: bold;
+      }
 
-        .check-here-btn:hover {
-            background-color: #2980b9;
-        }
+      .check-here-btn:hover {
+        background-color: #2980b9;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    
-
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-        <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
-            
-            <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-6">Heart Disease Prediction with Random Forest Algorithm</h1>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Penyakit jantung dapat terjadi karena adanya kerusakan pada pembuluh darah atau jantung itu sendiri, di sini kita akan melakukan prediksi apakah kamu terkena penyakit jantung atau tidak Prediksi ini dilakukan dengan menginputkan sejumlah data yaitu Jumlah pembuluh darah yang terkena fluoroskopi, Thallium, Depresi ST, Denyut jantung maksimum, Usia, Tekanan darah, Jenis kelamin, Kolesterol, Hasil EKG, Kemiringan ST, FBS (gula darah puasa) di atas 120, Jenis nyeri dada, Angina saat berolahraga</p>
-            <a href="{{ url_for('check_yourself') }}" class="check-here-btn">
-                Check Yourself Here!
-            </a>
+  <body>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+        <div
+          class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8"
+        >
+          <h1
+            class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-6"
+          >
+            Heart Disease Prediction with Random Forest Algorithm
+          </h1>
+          <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">
+            Penyakit jantung adalah kondisi ketika bagian jantung yang meliputi
+            pembuluh darah jantung, selaput jantung, katup jantung, dan otot
+            jantung mengalami gangguan. Penyakit jantung bisa disebabkan oleh
+            berbagai hal, seperti sumbatan pada pembuluh darah jantung,
+            peradangan, infeksi, atau kelainan bawaan. Dalam data yang
+            dikeluarkan oleh WHO pada tahun 2021, kematian akibat penyakit
+            jantung mencapai angka 17,8 juta kematian atau satu dari tiga
+            kematian di dunia setiap tahun disebabkan oleh penyakit jantung.
+          </p>
+          <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">
+            Pada website ini, kami membuat sebuah aplikasi yang dapat
+            memprediksi apakah seseorang memiliki penyakit jantung atau tidak.
+            Aplikasi ini dibuat dengan menggunakan algoritma Random Forest.
+            Algoritma Random Forest merupakan salah satu algoritma yang
+            digunakan untuk melakukan klasifikasi. Algoritma Random Forest ini
+            dapat digunakan untuk melakukan klasifikasi pada data yang bersifat
+            kategorikal maupun numerikal.
+          </p>
+          <a href="{{ url_for('check_yourself') }}" class="check-here-btn">
+            Check Yourself Here!
+          </a>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
-                
-                <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Made by Kelompok 6</h2>
-                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4"></p>
-                <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
-                    <li>
-                        Fitra Syamli Yudhisaputra - 24060121140124
-                    </li>
-                    <li>
-                        Fa'iq Rindha Maulana - 24060121130091
-                    </li>
-                    <li>
-                        Alfarizi Hidayah - 24060121130083
-                    </li>
-                    <li>
-                        Ganar Khatir Faza Zain - 24060121130079
-                    </li>
-                </ul>
+          <div
+            class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12"
+          >
+            <h2
+              class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2"
+            >
+              Made by Kelompok 6
+            </h2>
+            <p
+              class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4"
+            ></p>
+            <ul
+              class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
+              <li>Fitra Syamli Yudhisaputra - 24060121140124</li>
+              <li>Fa'iq Rindha Maulana - 24060121130091</li>
+              <li>Alfarizi Hidayah - 24060121130083</li>
+              <li>Ganar Khatir Faza Zain - 24060121130079</li>
+            </ul>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12"
+          >
+            <div>
+              <!-- Update the 'src' attribute with the correct path to your image -->
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="{{url_for('static', filename='dist/css/giphy.gif')}}"
+                alt="heart gif"
+              />
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
-                <div>
-                    <!-- Update the 'src' attribute with the correct path to your image -->
-                    <img class="h-auto max-w-full rounded-lg" src="{{url_for('static', filename='dist/css/giphy.gif')}}" alt="heart gif">
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-</section>
-
+      </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-</body>
-
+  </body>
 </html>
