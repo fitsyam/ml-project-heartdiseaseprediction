@@ -21,6 +21,7 @@
         h1 {
             text-align: center;
             margin-top: 20px;
+            color: #E5E7EB;
         }
 
         h2 {
@@ -28,46 +29,64 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 0px;
+            color: #161A30;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            position: relative;
         }
 
         .sidebar {
-            position: fixed; 
-            right: 0; 
-            margin-right: 100px; 
-            top: 55%; 
-            transform: translateY(-50%); 
-            width: 20%; 
-            background-color: #ffe6e6; 
-            padding: 20px; 
-            border-radius: 10px; 
-            z-index: 1; 
+            position: fixed;
+            right: 7%;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 20%;
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
             display: none;
+            border: 2px solid black;
         }
 
         .info-button {
             position: fixed;
-            left: 100px; /* Add left margin here */
+            left: 7%;
             top: 50%;
-            transform: translateY(-50%);
             z-index: 2;
             font-family: 'Outfit', sans-serif;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
             color: #ffe6e6;
-        }        
+            background-color: #3498db;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .info-button:hover {
+            background-color: #2980b9;
+        }
 
         .text-gray-900 {
             text-align: center;
-            color:#E5E7EB;
+            color: #E5E7EB;
         }
 
         label {
             display: block;
             margin-bottom: 5px;
             transition: color 0.3s ease;
+            color: #161A30;
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -86,29 +105,24 @@
         }
 
         input:focus {
-            background-color: #f0f8ff; /* Adjust this value as needed */
+            background-color: #f0f8ff;
+            /* Adjust this value as needed */
         }
 
         form {
             width: 100%;
-            max-width: 600px; /* Adjust this value as needed */
+            max-width: 600px;
+            /* Adjust this value as needed */
             margin: 20px auto;
-            background-color:  #ffe6e6;
+            background-color: #ffe6e6;
             padding: 20px;
             border-radius: 8px;
         }
 
-        .form-container {
-            display: flex;
-            justify-content: center;
-            font-family: 'Outfit', sans-serif;
-        }
-        
         .form-image {
-            width: 30%; 
+            width: 33%;
             height: 50%;
         }
-        
     </style>
 </head>
 
