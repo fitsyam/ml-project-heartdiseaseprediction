@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
-import numpy as np
 import joblib
+import numpy as np
+from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 
 # Menggunakan joblib untuk memuat model
-model = joblib.load('models/model1.pkl')
+model = joblib.load('models/baru.pkl')
 
 @app.route("/")
 @app.route("/index")
